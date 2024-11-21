@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAIRDOT E-Bookeeping</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script>myscript.js</script>
+</head>
+<body>
+    <div class="container">
+        <h2>CLAIRDOT E-Bookeeping</h2>
+        <div class="form-container">
+            <!-- Income Entry Form -->
+            <div class="form-section">
+                <h3>Income Entry</h3>
+                <form id="income-form">
+                    <label for="income-date">Date and Time</label>
+                    <input type="datetime-local" id="income-date" required>
+    
+                    <label for="income-service">Service Provided</label>
+                    <input type="text" id="income-service" required>
+    
+                    <label for="income-amount">Amount Charged</label>
+                    <input type="number" id="income-amount" required>
+    
+                    <label for="income-quantity">Quantity</label>
+                    <input type="number" id="income-quantity" required>
+    
+                    <label for="income-deposit">Deposit</label>
+                    <input type="number" id="income-deposit" required>
+    
+                    <label for="income-balance">Balance (if any)</label>
+                    <input type="number" id="income-balance">
+    
+                    <label for="income-total-cost">Total Cost of Service</label>
+                    <input type="number" id="income-total-cost" required>
+    
+                    <label for="income-attendant">Attendant</label>
+                    <input type="text" id="income-attendant" required>
+    
+                    <button type="button" onclick="addIncome()">Add Income</button>
+                </form>
+            </div>
+    
+            <!-- Expenditure Entry Form -->
+            <div class="form-section">
+                <h3>Expenditure Entry</h3>
+                <form id="expense-form">
+                    <label for="expense-date">Date and Time</label>
+                    <input type="datetime-local" id="expense-date" required>
+    
+                    <label for="expense-type">Expenditure Type</label>
+                    <input type="text" id="expense-type" required>
+    
+                    <label for="expense-item">Item</label>
+                    <input type="text" id="expense-item" required>
+    
+                    <label for="expense-cost">Cost of Expenditure</label>
+                    <input type="number" id="expense-cost" required>
+    
+                    <label for="expense-total-amount">Total Amount</label>
+                    <input type="number" id="expense-total-amount" required>
+    
+                    <label for="expense-attendant">Attendant</label>
+                    <input type="text" id="expense-attendant" required>
+    
+                    <button type="button" onclick="addExpense()">Add Expense</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Income and Expenditure Tables -->
+        <h3>Income Table</h3>
+        <table id="income-table">
+            <thead>
+                <tr>
+                    <th>Date and Time</th>
+                    <th>Service Provided</th>
+                    <th>Amount Charged</th>
+                    <th>Quantity</th>
+                    <th>Deposit</th>
+                    <th>Balance</th>
+                    <th>Total Cost of Service</th>
+                    <th>Attendant</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    
+        <h3>Expenditure Table</h3>
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Date and Time</th>
+                    <th>Expenditure Type</th>
+                    <th>Item</th>
+                    <th>Cost of Expenditure</th>
+                    <th>Total Amount</th>
+                    <th>Attendant</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    <div class="container">
+        <!-- Existing content (search, forms, tables) -->
+    
+        <!-- Summary Section -->
+        <h3>Summary</h3>
+        <div>
+            <p>Total Income: <span id="total-income">₦0.00</span></p>
+            <p>Total Expense: <span id="total-expense">₦0.00</span></p>
+            <p>Net Profit: <span id="net-profit">₦0.00</span></p>
+            <button onclick="showTotalProfit()">Show Current Profit</button>
+        </div>
+   
+    <script src="myscript.js"></script>
+    </body>

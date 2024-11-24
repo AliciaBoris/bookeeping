@@ -4,7 +4,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Ensuring responsive layout */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
 .container {
     max-width: 900px;
     margin: 20px auto;
